@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 11:44:20 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/10 23:18:27 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/14 21:47:57 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char				*ft_itoa(int n)
 	}
 	if (neg < 0)
 		buff[i++] = '-';
-	buff[i] = '\0';
+	buff[i++] = '\0';
 	ft_strrev(buff);
 	return (buff);
 }
