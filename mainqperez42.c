@@ -6,13 +6,13 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/10 12:36:07 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/16 12:10:30 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
  *
- *	Salut la nouvelle promo merci de lire README.md et bon courage tout le monde
+ *	Salut la nouvelle promo merci de remercier les contributeurs
  *
  *	https://github.com/QuentinPerez
  *	https://github.com/mfontain
@@ -101,8 +101,7 @@ int	uf_test_lstdelone(void);
 int	uf_test_lstdel(void);
 int	uf_test_lstadd(void);
 int	uf_test_lstiter(void);
-int uf_test_lstmap(void);
-
+int	uf_test_lstmap(void);
 
 typedef struct	s_test
 {
@@ -233,12 +232,12 @@ int					main(void)
 	D_ADD_TEST(lstdelone);
 #define	D_LSTDEL
 	D_ADD_TEST(lstdel);
-//#define	D_LSTADD
-//	D_ADD_TEST(lstadd);
-//#define	D_LSTITER
-//	D_ADD_TEST(lstiter);
-//#define D_LSTMAP
-//	D_ADD_TEST(lstmap);
+#define	D_LSTADD
+	D_ADD_TEST(lstadd);
+#define	D_LSTITER
+	D_ADD_TEST(lstiter);/*
+#define D_LSTMAP
+	D_ADD_TEST(lstmap);*/
 	while (test[i].set == true)
 	{
 		printf("Test [%s] : ", test[i].name);
@@ -293,7 +292,7 @@ t_list		*uf_testmap(t_list *elem)
 {
 	t_list	*new;
 	char	*content;
-	int		i;
+	size_t	i;
 
 	content = ft_strdup((char *)(elem->content));
 	i = 0;

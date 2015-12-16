@@ -6,7 +6,7 @@
 #*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/12/06 13:02:35 by rthidet           #+#    #+#             *#
-#*   Updated: 2015/12/15 20:26:38 by rthidet          ###   ########.fr       *#
+#*   Updated: 2015/12/16 12:11:05 by rthidet          ###   ########.fr       *#
 #*                                                                            *#
 #******************************************************************************#
 
@@ -85,6 +85,6 @@ run:
 	$(CC) -o $(EXE) $(LIBS) $(TEST) $(HPATH)
 	@echo "$(YELLOW)\nSTART TEST = $(EXE)\n$(RESET)"
 	@./$(EXE)
-	@echo "$(GREEN)END TEST\n$(RESET)"
+	@echo "$(GREEN)\n\tEND TEST\n$(RESET)"
 
 .PHONY: all clean fclean re go

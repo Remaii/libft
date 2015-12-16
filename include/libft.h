@@ -6,20 +6,16 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:01 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/15 20:26:18 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/16 12:18:10 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <ctype.h>
-# include <errno.h>
-
 
 typedef struct		s_list
 {
@@ -91,6 +87,5 @@ void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void	ft_lstdel(t_list **alst, void	(*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-//t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
-
+/*t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));*/
 #endif
