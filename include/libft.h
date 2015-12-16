@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:01 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/11 10:58:06 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/15 20:26:18 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_rot13(char *s);
 void	ft_strrev(char *s);
 
 int		ft_toupper(int c);
