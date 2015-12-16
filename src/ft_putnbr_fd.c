@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 21:33:19 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/16 11:31:39 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/16 13:00:58 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ static void		nblen(int *len, int n)
 	}
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void			ft_putnbr_fd(int n, int fd)
 {
-	int len;
+	int			len;
 
 	len = 1;
 	if (n != -2147483648)
