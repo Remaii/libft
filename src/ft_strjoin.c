@@ -6,7 +6,7 @@
 /*   By: rthidet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 23:58:48 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/04 03:28:43 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 11:29:01 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	return (ret);
 }
 /*
-char	*ft_strjoinfree(char *s1, char *s2)
+static char	*ft_strjoinfree(char *s1, char *s2)
 {
-	int i;
-	char *ret;
+	int		i;
+	char	*ret;
 
 	if(s1 == NULL || s2 == NULL)
 		return (NULL);
