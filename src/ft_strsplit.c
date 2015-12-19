@@ -6,7 +6,7 @@
 /*   By: rthidet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 15:51:47 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/04 21:37:59 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 16:35:24 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static const char	*ft_str_chr(const char *s, char c, int skip)
 	return (s);
 }
 
-static int		ft_count_cut(const char *s, char c)
+static int			ft_count_cut(const char *s, char c)
 {
-	int			icount;
+	int				icount;
 
 	icount = 0;
 	while (*s != '\0')
@@ -40,9 +40,9 @@ static int		ft_count_cut(const char *s, char c)
 	return (icount);
 }
 
-static char		**ft_tabclr(char **tabfree, int len)
+static char			**ft_tabclr(char **tabfree, int len)
 {
-	int			iclr;
+	int				iclr;
 
 	iclr = 0;
 	while (iclr < len)
@@ -51,7 +51,7 @@ static char		**ft_tabclr(char **tabfree, int len)
 	return (NULL);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	char			**newtab;
 	int				i;

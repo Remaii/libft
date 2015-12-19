@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 14:19:16 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/19 16:39:52 by rthidet          ###   ########.fr       */
+/*   Created: 2015/12/19 17:05:14 by rthidet           #+#    #+#             */
+/*   Updated: 2015/12/19 18:17:32 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *big, const char *little, size_t bilen)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	size_t	lilen;
-	int		cmp;
+	t_list	*new;
 
-	if (little[0] == '\0')
-		return ((char*)big);
-	lilen = ft_strlen(little);
-	cmp = 1;
-	while (lilen <= bilen && *big != '\0'
-			&& (cmp = ft_strncmp(big, little, lilen)))
-	{
-		bilen--;
-		big++;
-	}
-	if (cmp != 0)
-		return (NULL);
-	else
-		return ((char*)big);
+	if (!lst->next)
+		return (f(lst));
+	new = ft_lstmap(lst->next, f);
+	ft_lstadd(&new, f(lst));
+	return (new);
 }

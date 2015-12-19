@@ -6,13 +6,13 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 11:44:20 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/19 11:27:02 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 16:38:41 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int					ft_nbrlen(int n)
+static int			ft_nbrlen(int n)
 {
 	int				i;
 

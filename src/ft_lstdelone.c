@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 04:52:42 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/04 04:56:45 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 16:38:00 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	if (alst== NULL || *alst == NULL)
+	if (alst == NULL || *alst == NULL)
 		return ;
 	if (del != NULL)
 		del((*alst)->content, (*alst)->content_size);

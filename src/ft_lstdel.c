@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 05:00:48 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/04 05:05:54 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 16:38:19 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
 	while (lst != NULL)
 	{
 		tmp = lst->next;
-		ft_lstdelone(&lst,del);
+		ft_lstdelone(&lst, del);
 		lst = tmp;
 	}
 	*alst = NULL;

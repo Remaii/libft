@@ -6,16 +6,16 @@
 /*   By: rthidet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 23:43:03 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/04 03:11:53 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 16:36:22 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char				*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned int i;
-	char *ret;
+	unsigned int	i;
+	char			*ret;
 
 	if (s == NULL)
 		return (NULL);

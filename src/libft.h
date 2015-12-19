@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:01 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/16 12:18:10 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 18:17:56 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_strrev(char *s);
-
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isprint(int c);
@@ -60,10 +59,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
-
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-
 char	*ft_itoa(int n);
 char	*ft_strnew(size_t size);
 char	*ft_strchr(const char *s, int c);
@@ -81,11 +78,11 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_strsplit(char const *s, char c);
-
-t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void	ft_lstdel(t_list **alst, void	(*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-/*t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));*/
+t_list	*ft_lstnew(void const *content, size_t content_size);
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
 #endif

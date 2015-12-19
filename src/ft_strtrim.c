@@ -6,17 +6,17 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:17:03 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/04 03:34:33 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/19 16:35:48 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
-	int i;
-	int lon;
-	char *ret;
+	int		i;
+	int		lon;
+	char	*ret;
 
 	if (s == NULL)
 		return (NULL);
