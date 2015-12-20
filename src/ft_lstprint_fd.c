@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rthidet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 12:50:14 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/21 00:16:56 by rthidet          ###   ########.fr       */
+/*   Created: 2015/12/20 13:40:15 by rthidet           #+#    #+#             */
+/*   Updated: 2015/12/20 13:55:23 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_lstprint_fd(t_list *lst, int fd)
 {
-	char *ret;
-
-	ret = s1;
-	while (*s1 != '\0')
-		s1++;
-	while (n-- != 0 && *s2 != '\0')
-		*s1++ = *s2++;
-	*s1 = '\0';
-	return (ret);
+	while (lst)
+	{
+		ft_putendl_fd(lst->content, fd);
+		lst = lst->next;
+	}
 }
