@@ -6,7 +6,8 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:01 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/20 13:57:35 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/21 00:26:33 by rthidet          ###   ########.fr       */
+/*   Updated: 2015/12/20 18:05:05 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +55,8 @@ int					ft_isdigit(int c);
 int					ft_isascii(int c);
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
+int					ft_min(int x, int y);
+int					ft_max(int x, int y);
 int					ft_atoi(const char *str);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
