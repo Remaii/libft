@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/10 23:32:39 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/19 18:58:50 by rthidet          ###   ########.fr       */
+/*   Created: 2015/12/20 18:05:25 by rthidet           #+#    #+#             */
+/*   Updated: 2015/12/20 18:07:22 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+int		ft_max(int x, int y)
 {
-	if (alst && new)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
+	return (x > y ? x : y);
 }

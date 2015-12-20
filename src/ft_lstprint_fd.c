@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstprint_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/10 23:32:39 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/19 18:58:50 by rthidet          ###   ########.fr       */
+/*   Created: 2015/12/20 16:10:13 by rthidet           #+#    #+#             */
+/*   Updated: 2015/12/20 16:17:07 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstprint_fd(t_list *lst, int fd)
 {
-	if (alst && new)
+	while (lst)
 	{
-		new->next = *alst;
-		*alst = new;
+		ft_putendl_fd(lst->content, fd);
+		lst = lst->next;
 	}
 }
