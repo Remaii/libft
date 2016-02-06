@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:01 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/21 00:26:33 by rthidet          ###   ########.fr       */
+/*   Updated: 2016/02/06 12:17:09 by rthidet          ###   ########.fr       */
 /*   Updated: 2015/12/20 18:05:05 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -48,6 +48,7 @@ void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_strrev(char *s);
 void				ft_lstprint_fd(t_list *lst, int fd);
+void				ft_error(char *str, int error_code);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isprint(int c);
@@ -84,7 +85,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				**ft_strsplit(char const *s, char c);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void	(*del)(void *, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstadd(t_list **alst, t_list *nouv);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));

@@ -6,17 +6,17 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 23:32:39 by rthidet           #+#    #+#             */
-/*   Updated: 2015/12/19 18:58:50 by rthidet          ###   ########.fr       */
+/*   Updated: 2016/02/06 12:17:41 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *nouv)
 {
-	if (alst && new)
+	if (alst && nouv)
 	{
-		new->next = *alst;
-		*alst = new;
+		nouv->next = *alst;
+		*alst = nouv;
 	}
 }
