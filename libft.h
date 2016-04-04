@@ -6,7 +6,7 @@
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:01 by rthidet           #+#    #+#             */
-/*   Updated: 2016/02/06 12:21:59 by rthidet          ###   ########.fr       */
+/*   Updated: 2016/03/28 19:22:34 by rthidet          ###   ########.fr       */
 /*   Updated: 2015/12/20 18:05:05 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -17,6 +17,18 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <fcntl.h>
+
+# define BUFF_SIZE 8
+# define MAX_FD 256
+
+typedef struct	s_gnl
+{
+	char		*line[MAX_FD + 1];
+	char		*buffer;
+	int			nb;
+	char		*tmp;
+}				t_gnl;
 
 typedef struct		s_list
 {
@@ -49,6 +61,8 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_strrev(char *s);
 void				ft_lstprint_fd(t_list *lst, int fd);
 void				ft_error(char *str, int error_code);
+
+int					get_next_line(int const fd, char **line);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isprint(int c);
@@ -64,8 +78,10 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
+
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+
 char				*ft_itoa(int n);
 char				*ft_strnew(size_t size);
 char				*ft_strchr(const char *s, int c);
@@ -83,10 +99,13 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				**ft_strsplit(char const *s, char c);
+
+/*List*/
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void	(*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *nouv);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 

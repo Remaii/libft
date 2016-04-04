@@ -6,7 +6,7 @@
 #*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/12/11 10:05:45 by rthidet           #+#    #+#             *#
-#*   Updated: 2016/02/06 12:12:29 by rthidet          ###   ########.fr       *#
+#*   Updated: 2016/04/04 11:19:11 by rthidet          ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -27,6 +27,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 		ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c\
 		ft_strrchr.c ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c\
 		ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstmap.c ft_lstprint_fd.c\
+		get_next_line.c ft_max.c ft_min.c\
 
 # STANDARD VARIABLES
 CC = gcc -Wall -Wextra -Werror
@@ -34,7 +35,8 @@ AR = ar rc
 RM = rm -rf
 SRCDIR = ./
 OBJDIR = object
-OBJ = $(addprefix ./$(OBJDIR)/, $(SRC:.c=.o))
+OBJ = $(SRC:.c=.o)
+#OBJ = $(addprefix ./$(OBJDIR)/, $(SRC:.c=.o))
 
 # COLORS
 RESET=\033[0m
@@ -45,30 +47,28 @@ YELLOW=\033[33m
 BLUE=\033[34m
 MAGENTA=\033[35m
 CYAN=\033[36m
+OK = $(GREEN)[OK!]$(RESET)
+KO = $(GREEN)[DE$(YELLOW)LE$(RED)TE]$(RESET)
+
 
 # START RULES
+$(NAME):
+	@echo "Compiling $(NAME)...$(OK)"
+	@$(CC) -c $(SRC)
+	@$(AR) $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "Ranlib $(NAME)...$(OK)"
+	@mkdir -p $(OBJDIR) && mv $(SRC:.c=.o) ./$(OBJDIR)/
+
 all: $(NAME)
 
-$(NAME):
-	@echo "$(RESET)$(MAGENTA)Building src to obj...$(RESET)"
-	@$(CC) -c $(SRCDIR)$(SRC) $(HPATH)
-	@echo "$(RESET)$(MAGENTA)Create Object folder and move all .o in folder"
-	@mkdir -p $(OBJDIR) && mv $(SRC:.c=.o) ./$(OBJDIR)/
-	@echo "$(RESET)$(MAGENTA)Linking obj files to libft.a...$(RESET)"
-	@$(AR) $(NAME) $(OBJ)
-	@echo "$(CYAN)Execute ranlib on $(NAME)$(RESET)"
-	@ranlib $(NAME)
-	@echo "$(CYAN)\tLIBFT.A SUCCESS$(RESET)"
-#	@mv $(NAME) $(RACINE)
-
-clean:
-	@echo "$(MAGENTA)Removal Object folder...$(RESET)"
+clean :
+	@echo "Removing object files ...$(KO)"
 	@$(RM) $(OBJDIR)
 
-fclean: clean
-	@echo "$(MAGENTA)Removal $(NAME)"
+fclean : clean
+	@echo "Removing $(NAME) ...$(KO)"
 	@$(RM) $(NAME)
-#	@$(RM) ../$(NAME)
 
 re: fclean all
 
