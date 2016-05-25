@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_fabs.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/06 12:13:12 by rthidet           #+#    #+#             */
-/*   Updated: 2016/02/06 12:15:19 by rthidet          ###   ########.fr       */
+/*   Created: 2016/05/25 23:50:07 by rthidet           #+#    #+#             */
+/*   Updated: 2016/05/25 23:54:23 by rthidet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_error(char *str, int error_code)
+int		ft_abs(int x)
 {
-	ft_putendl(str);
-	exit(error_code);
+	if (x < 0)
+		return (-x);
+	else
+		return (x);
 }

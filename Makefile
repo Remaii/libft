@@ -6,7 +6,7 @@
 #*   By: rthidet <rthidet@student.42.fr>            +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/12/11 10:05:45 by rthidet           #+#    #+#             *#
-#*   Updated: 2016/04/04 11:19:11 by rthidet          ###   ########.fr       *#
+#*   Updated: 2016/05/25 23:55:10 by rthidet          ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -27,7 +27,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 		ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c\
 		ft_strrchr.c ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c\
 		ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstmap.c ft_lstprint_fd.c\
-		get_next_line.c ft_max.c ft_min.c\
+		get_next_line.c ft_max.c ft_min.c ft_fabs.c ft_abs.c\
 
 # STANDARD VARIABLES
 CC = gcc -Wall -Wextra -Werror
